@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Currency Conversion App {% endblock %}</h1>
+<form method=["GET","POST"] action=" /sample">
+
+    <!--Starting Currency Title-->
+    <label for="title">Starting Currency</label>
+    <br>
+    <input type="text" name="title"
+           placeholder="Enter Amount"
+           value="{{ request.form['title'] }}"></input>
+    <br>
+    <!--Dropdown html-->
+    <select name="startCurr">
+        {% for c in currencies %}
+        <option>{{ c }}</option>
+        {% endfor %}
+    </select>
+    
+    
+    <br />
+
+    <br />
+    
+    
+    <!--Ending Currency Title-->
+    <label for="title">Converted Currency</label>
+    <br>
+    <input type="text" name="title"
+           placeholder="Results"
+           value="{{ request.form['title'] }}"></input>
+    <br>
+    <!--Dropdown html-->
+    <select name="ConvertedCurr">
+        {% for c in currencies %}
+        <option>{{ c }}</option>
+        {% endfor %}
+    </select>
+</form>
+
+{% endblock %}
