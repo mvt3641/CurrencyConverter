@@ -1,0 +1,6 @@
+# ignore vitural evn
+myvenv
+# ignore VS folder 
+.vs
+# ignore folder 
+__pycache__
